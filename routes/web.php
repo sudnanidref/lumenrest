@@ -18,5 +18,10 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/produk','ProdukController@create');
+$router->get('/produk','ProdukController@index');
+$router->get('/produk/{id}','ProdukController@index');
+$router->put('/produk/{id}','ProdukController@update');
+$router->delete('/produk/{id}','ProdukController@destroy');
 
-$router->get('/produk','ProdukController@get');
+$router->post('/user','UserController@register');
+$router->post('/login','UserController@login');
